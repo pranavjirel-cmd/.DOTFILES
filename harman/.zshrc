@@ -11,3 +11,4 @@ alias rice-harman="bash ~/switch-rice.sh harman"
 export PATH="$PATH:/home/ichika/.lmstudio/bin"
 # End of LM Studio CLI section
 
+export PATH="$HOME/.cargo/bin:$PATH"
