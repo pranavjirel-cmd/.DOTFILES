@@ -1,6 +1,11 @@
 #!/bin/bash
 echo "restoring ambxst rice..."
 
+pkill swww-daemon
+pkill awww-daemon
+sleep 1
+awww-daemon &
+sleep 1
 pkill quickshell
 pkill swaync
 pkill -f "src/ambxst"

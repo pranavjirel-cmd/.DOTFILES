@@ -1,6 +1,11 @@
 #!/bin/bash
 echo "restoring harman rice..."
 
+pkill swww-daemon
+pkill awww-daemon
+sleep 1
+awww-daemon &
+sleep 1
 pkill -f "src/ambxst"
 pkill quickshell
 pkill axctl
@@ -14,6 +19,7 @@ sed -i '/source = ~\/.local\/share\/ambxst\/hyprland.conf/d' ~/.config/hypr/hypr
 sed -i '107,189s/^#bind/bind/; 107,189s/^#binde/binde/; 107,189s/^#bindm/bindm/' ~/.config/hypr/hyprland.conf
 hyprctl reload
 wal -R
+swww img $(cat ~/.cache/wal/wal) --transition-type wipe --transition-duration 1
 sleep 1
 quickshell &
 
