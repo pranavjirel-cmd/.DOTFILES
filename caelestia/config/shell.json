@@ -12,6 +12,13 @@
         "showDashboard": true,
         "showOnHover": true
     },
+    "launcher": {
+        "maxWallpapers": 9,
+        "showOnHover": false,
+        "useFuzzy": {
+            "wallpapers": false
+        }
+    },
     "paths": {
         "wallpaperDir": "~/wallpapers"
     },
