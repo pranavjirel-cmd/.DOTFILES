@@ -1,11 +1,14 @@
 {
     "appearance": {
         "transparency": {
-            "enabled": false
+            "enabled": true
         }
     },
     "background": {
         "wallpaperEnabled": true
+    },
+    "bar": {
+        "persistent": false
     },
     "dashboard": {
         "enabled": true,
