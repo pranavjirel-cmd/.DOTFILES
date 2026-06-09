@@ -2,13 +2,13 @@
 echo "backing up caelestia rice..."
 
 mkdir -p ~/dotfiles/caelestia
-
-cp -r ~/.config/caelestia ~/dotfiles/caelestia/config 2>/dev/null
+rm -rf ~/dotfiles/caelestia/config
+cp -r ~/.config/caelestia ~/dotfiles/caelestia/config
 cp ~/.zshrc ~/dotfiles/caelestia/.zshrc 2>/dev/null
 caelestia scheme get --name > ~/dotfiles/caelestia/scheme.txt 2>/dev/null
 
 cd ~/dotfiles
-git add .
+git add -A
 git commit -m "caelestia backup - $(date '+%Y-%m-%d %H:%M')"
 git push
 

@@ -17,7 +17,8 @@ ln -sf ~/.local/share/caelestia/hypr/variables.conf variables.conf
 ln -sf ~/.local/share/caelestia/hypr/scheme scheme
 cp -n ~/.local/share/caelestia/hypr/scheme/default.conf ~/.local/share/caelestia/hypr/scheme/current.conf 2>/dev/null
 
-cp -r ~/dotfiles/caelestia/config/* ~/.config/caelestia/ 2>/dev/null
+rm -rf ~/.config/caelestia
+cp -r ~/dotfiles/caelestia/config ~/.config/caelestia
 
 hyprctl reload
 caelestia shell -d

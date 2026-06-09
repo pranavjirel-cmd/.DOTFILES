@@ -12,6 +12,9 @@
         "showDashboard": true,
         "showOnHover": true
     },
+    "paths": {
+        "wallpaperDir": "~/wallpapers"
+    },
     "services": {
         "audioIncrement": 0.05,
         "brightnessIncrement": 0.05,
