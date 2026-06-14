@@ -15,7 +15,11 @@ pkill -f "src/ambxst"
 pkill axctl
 sleep 2
 
+rm -rf ~/.config/ambxst
 cp -r ~/dotfiles/ambxst/ambxst ~/.config/
+mkdir -p ~/.config/scripts
+cp ~/dotfiles/ambxst/record-toggle.sh ~/.config/scripts/
+chmod +x ~/.config/scripts/record-toggle.sh
 cp ~/dotfiles/ambxst/hyprland.conf ~/.local/share/ambxst/
 cp ~/dotfiles/ambxst/hyprland.lua ~/.local/share/ambxst/
 cp ~/dotfiles/ambxst/hyprland-main.conf ~/.config/hypr/hyprland.conf
