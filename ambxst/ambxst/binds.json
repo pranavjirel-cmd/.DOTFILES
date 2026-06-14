@@ -1196,8 +1196,9 @@
             "actions": [
                 {
                     "args": {
+                        "command": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
                     },
-                    "id": "audio.volume-up",
+                    "id": "command.run",
                     "layouts": [
                     ]
                 }
@@ -1216,8 +1217,9 @@
             "actions": [
                 {
                     "args": {
+                        "command": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"
                     },
-                    "id": "audio.volume-down",
+                    "id": "command.run",
                     "layouts": [
                     ]
                 }
@@ -2560,6 +2562,28 @@
             "keys": [
                 {
                     "key": "T",
+                    "modifiers": [
+                        "SUPER"
+                    ]
+                }
+            ],
+            "name": ""
+        },
+        {
+            "actions": [
+                {
+                    "args": {
+                        "command": "bash ~/.config/scripts/record-toggle.sh"
+                    },
+                    "id": "command.run",
+                    "layouts": [
+                    ]
+                }
+            ],
+            "enabled": true,
+            "keys": [
+                {
+                    "key": "R",
                     "modifiers": [
                         "SUPER"
                     ]
