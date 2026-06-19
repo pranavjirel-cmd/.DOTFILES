@@ -1,0 +1,8 @@
+# Let ichika swap the Caelestia shell system files (official <-> fork rice)
+# without a password. Exact command + argument match only — no wildcards, so this
+# grants nothing beyond these two precise invocations.
+#
+# Validate + install with:
+#   sudo visudo -cf caelestia-rice.sudoers && \
+#     sudo install -m440 -o root -g root caelestia-rice.sudoers /etc/sudoers.d/caelestia-rice
+ichika ALL=(root) NOPASSWD: /usr/local/bin/caelestia-rice-swap official, /usr/local/bin/caelestia-rice-swap fork

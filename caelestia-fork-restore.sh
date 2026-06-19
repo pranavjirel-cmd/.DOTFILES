@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "restoring caelestia rice..."
+echo "restoring caelestia (fork) rice..."
 
 pkill -x qs 2>/dev/null
 pkill -x quickshell 2>/dev/null
@@ -7,8 +7,8 @@ pkill -x swaync 2>/dev/null
 pkill -x mako 2>/dev/null
 pkill -x awww-daemon 2>/dev/null
 
-# swap the Caelestia shell system files to the official snapshot (NOPASSWD helper)
-sudo /usr/local/bin/caelestia-rice-swap official
+# swap the Caelestia shell system files to the fork snapshot (NOPASSWD helper)
+sudo /usr/local/bin/caelestia-rice-swap fork
 
 mkdir -p ~/.config/hypr
 cat ~/.local/share/caelestia/hypr/hyprland.conf > ~/.config/hypr/hyprland.conf
@@ -27,4 +27,4 @@ caelestia shell -d
 sleep 1
 caelestia scheme set --name dynamic 2>/dev/null
 
-echo "done! caelestia restored"
+echo "done! caelestia (fork) restored"

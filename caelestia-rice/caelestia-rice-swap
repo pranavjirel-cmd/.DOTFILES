@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# caelestia-rice-swap — swap the Caelestia shell system files between the
+# 'official' and 'fork' snapshots, then leave them owned by root.
+#
+# Runs as root via the NOPASSWD rule in /etc/sudoers.d/caelestia-rice.
+# The snapshot location and destination paths are HARDCODED on purpose so the
+# privileged command surface is fixed: the only external input is $1, which must
+# be exactly "official" or "fork".
+#
+# Install with:  sudo install -m755 caelestia-rice-swap /usr/local/bin/caelestia-rice-swap
+set -euo pipefail
+
+VARIANT="${1:-}"
+CACHE="/home/ichika/.local/share/caelestia-rice"
+
+case "$VARIANT" in
+    official|fork) ;;
+    *) echo "usage: caelestia-rice-swap {official|fork}" >&2; exit 2 ;;
+esac
+
+SRC="$CACHE/$VARIANT"
+[ -d "$SRC" ] || { echo "caelestia-rice: no snapshot at $SRC (run caelestia-rice-refresh.sh)" >&2; exit 1; }
+
+# The four functional install paths shared by both variants. rsync --delete makes
+# each destination EXACTLY match the snapshot (official ships fewer files than the
+# fork, so stale files must be removed, not just overwritten). --chown=root:root
+# forces system ownership even though the snapshot is user-owned.
+for rel in \
+    etc/xdg/quickshell/caelestia \
+    usr/lib/qt6/qml/Caelestia \
+    usr/lib/qt6/qml/M3Shapes \
+    usr/lib/caelestia
+do
+    [ -d "$SRC/$rel" ] || { echo "caelestia-rice: missing in snapshot: $SRC/$rel" >&2; exit 1; }
+    mkdir -p "/$rel"
+    rsync -a --delete --chown=root:root "$SRC/$rel/" "/$rel/"
+done
+
+echo "caelestia-rice: system files now = $VARIANT"
