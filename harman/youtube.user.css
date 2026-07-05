@@ -418,4 +418,20 @@ segmented-like-dislike-button-view-model [class*="eparator"] {{
 dislike-button-view-model button {{
   margin-left: -1px !important;
 }}
+
+/* --- polish 4: symmetric like/dislike boxes --- */
+like-button-view-model button,
+dislike-button-view-model button {{
+  background: var(--yt-panel) !important;
+  border: 1px solid var(--yt-line) !important;
+}}
+dislike-button-view-model button {{
+  margin-left: -1px !important;
+}}
+like-button-view-model button:hover,
+dislike-button-view-model button:hover {{
+  border-color: var(--yt-hot) !important;
+  outline: 2px solid var(--yt-hot) !important;
+  outline-offset: -2px !important;
+}}
 }}
