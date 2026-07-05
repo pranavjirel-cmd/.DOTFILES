@@ -434,4 +434,28 @@ dislike-button-view-model button:hover {{
   outline: 2px solid var(--yt-hot) !important;
   outline-offset: -2px !important;
 }}
+
+/* --- polish 5: metadata panel = one box, hover-highlighted; inner description line removed --- */
+ytd-watch-metadata:hover {{
+  border-color: var(--yt-hot) !important;
+  outline: 2px solid var(--yt-hot) !important;
+  outline-offset: -2px !important;
+}}
+#description,
+ytd-text-inline-expander {{
+  border: 0 !important;
+  outline: 0 !important;
+}}
+#description:hover,
+ytd-text-inline-expander:hover {{
+  border: 0 !important;
+  outline: 0 !important;
+}}
+
+/* --- polish 6: retire the old above-the-fold inner hover --- */
+#above-the-fold,
+#above-the-fold:hover {{
+  border: 0 !important;
+  outline: 0 !important;
+}}
 }}
