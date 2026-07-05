@@ -458,4 +458,58 @@ ytd-text-inline-expander:hover {{
   border: 0 !important;
   outline: 0 !important;
 }}
+
+/* --- polish 7: mode-proofing — new text engine + playlist header --- */
+yt-attributed-string,
+yt-attributed-string span,
+ytd-comment-view-model #content-text,
+ytd-expander #content {{
+  color: var(--yt-text) !important;
+}}
+ytd-playlist-panel-renderer .header,
+ytd-playlist-panel-renderer div.header {{
+  background: var(--yt-panel) !important;
+  color: var(--yt-text) !important;
+  border-bottom: 1px solid var(--yt-line-soft) !important;
+}}
+ytd-playlist-panel-renderer .title,
+ytd-playlist-panel-renderer .publisher,
+ytd-playlist-panel-renderer .index-message {{
+  color: var(--yt-text) !important;
+}}
+#playlist-items,
+ytd-playlist-panel-renderer #container {{
+  background: transparent !important;
+}}
+
+/* --- polish 8: playlist row internals inherit our background --- */
+ytd-playlist-panel-video-renderer a#wrapper,
+ytd-playlist-panel-video-renderer #wrapper,
+ytd-playlist-panel-video-renderer #container,
+ytd-playlist-panel-video-renderer #meta,
+ytd-playlist-panel-video-renderer #menu,
+ytd-playlist-panel-video-renderer yt-icon-button {{
+  background: transparent !important;
+}}
+ytd-playlist-panel-video-renderer #video-title,
+ytd-playlist-panel-video-renderer .byline {{
+  color: var(--yt-text) !important;
+}}
+ytd-playlist-panel-video-renderer .byline,
+ytd-playlist-panel-video-renderer #byline {{
+  color: var(--yt-muted) !important;
+}}
+
+/* --- polish 9: the dark slab is #items (class .playlist-items), not #playlist-items --- */
+ytd-playlist-panel-renderer #items,
+ytd-playlist-panel-renderer .playlist-items,
+div.playlist-items {{
+  background: transparent !important;
+}}
+ytd-playlist-panel-video-renderer {{
+  background: var(--yt-bg) !important;
+}}
+ytd-playlist-panel-video-renderer #video-title {{
+  color: var(--yt-text) !important;
+}}
 }}
