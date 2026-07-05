@@ -323,4 +323,15 @@ ytd-watch-next-secondary-results-renderer:hover {{
   display: block !important;
 }}
 
+/* search bar hover */
+#search-form:hover,
+#container.ytd-searchbox:hover,
+.ytSearchboxComponentInputBox:hover,
+.ytSearchboxComponentSearchButton:hover,
+.ytSearchboxComponentSearchButtonDark:hover {{
+  border-color: var(--yt-hot) !important;
+  outline: 2px solid var(--yt-hot) !important;
+  outline-offset: -2px !important;
+}}
+
 }}
