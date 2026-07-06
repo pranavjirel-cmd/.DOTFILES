@@ -512,4 +512,20 @@ ytd-playlist-panel-video-renderer {{
 ytd-playlist-panel-video-renderer #video-title {{
   color: var(--yt-text) !important;
 }}
+
+/* --- polish 10: masthead + drawer header inner layers --- */
+ytd-masthead #background,
+div#background.ytd-masthead,
+ytd-app #header,
+div#header.ytd-app,
+tp-yt-app-drawer #header {{
+  background: var(--yt-bg) !important;
+}}
+ytd-masthead yt-icon,
+ytd-masthead yt-icon-button,
+ytd-masthead button#button,
+tp-yt-app-drawer yt-icon,
+ytd-topbar-menu-button-renderer yt-icon {{
+  color: var(--yt-text) !important;
+}}
 }}
