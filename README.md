@@ -1,0 +1,1 @@
+4. Worth committing: this is exactly the kind of system-level fix that's easy to forget you made. A line in your dotfiles reference noting why nvme_core.default_ps_max_latency_us=0 is in /etc/kernel/cmdline (TWSC SSD APST hang on shutdown, July 2026) will save future-you a confused hour — especially since a fresh install or a boot-entry regeneration mishap could silently drop it.
