@@ -528,4 +528,70 @@ tp-yt-app-drawer yt-icon,
 ytd-topbar-menu-button-renderer yt-icon {{
   color: var(--yt-text) !important;
 }}
+
+/* --- polish 11: guide drawer, icon buttons, notification dropdown --- */
+tp-yt-app-drawer,
+tp-yt-app-drawer #contentContainer {{
+  background: var(--yt-bg) !important;
+  border-right: 1px solid var(--yt-line-soft) !important;
+}}
+ytd-guide-renderer,
+#guide-content,
+ytd-guide-section-renderer {{
+  background: transparent !important;
+}}
+tp-yt-paper-item {{
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--yt-text) !important;
+}}
+tp-yt-paper-item:hover {{
+  background: var(--yt-panel) !important;
+  outline: 2px solid var(--yt-hot) !important;
+  outline-offset: -2px !important;
+}}
+ytd-guide-entry-renderer[active] tp-yt-paper-item {{
+  background: var(--yt-panel) !important;
+  outline: 2px solid var(--yt-hot) !important;
+  outline-offset: -2px !important;
+}}
+ytd-guide-section-renderer h3 {{
+  color: var(--yt-muted) !important;
+}}
+
+/* icon buttons (bell, mic, kebabs): square, themed, hover ring */
+yt-icon-button,
+yt-icon-button #button,
+button#button.yt-icon-button {{
+  border-radius: 0 !important;
+  color: var(--yt-text) !important;
+}}
+yt-icon-button:hover {{
+  background: var(--yt-panel) !important;
+  outline: 2px solid var(--yt-hot) !important;
+  outline-offset: -2px !important;
+}}
+
+/* notification + generic dropdowns */
+tp-yt-iron-dropdown,
+tp-yt-iron-dropdown #contentWrapper,
+ytd-multi-page-menu-renderer {{
+  background: var(--yt-panel) !important;
+  border: 1px solid var(--yt-line) !important;
+  color: var(--yt-text) !important;
+}}
+ytd-notification-renderer {{
+  background: var(--yt-bg) !important;
+  border: 1px solid var(--yt-line-soft) !important;
+  margin: 6px !important;
+}}
+ytd-notification-renderer:hover {{
+  border-color: var(--yt-hot) !important;
+  outline: 2px solid var(--yt-hot) !important;
+  outline-offset: -2px !important;
+}}
+ytd-notification-renderer yt-formatted-string,
+ytd-notification-renderer .message {{
+  color: var(--yt-text) !important;
+}}
 }}
