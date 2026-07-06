@@ -594,4 +594,34 @@ ytd-notification-renderer yt-formatted-string,
 ytd-notification-renderer .message {{
   color: var(--yt-text) !important;
 }}
+
+/* --- polish 12: notification header + see-through menu scrim --- */
+ytd-simple-menu-header-renderer {{
+  background: var(--yt-panel) !important;
+  color: var(--yt-text) !important;
+  border-bottom: 1px solid var(--yt-line-soft) !important;
+}}
+ytd-simple-menu-header-renderer yt-formatted-string,
+ytd-simple-menu-header-renderer yt-icon {{
+  color: var(--yt-text) !important;
+}}
+tp-yt-iron-overlay-backdrop {{
+  background: #000 !important;
+  opacity: 0.35 !important;
+}}
+
+/* --- polish 12: notification header + see-through menu scrim --- */
+ytd-simple-menu-header-renderer {{
+  background: var(--yt-panel) !important;
+  color: var(--yt-text) !important;
+  border-bottom: 1px solid var(--yt-line-soft) !important;
+}}
+ytd-simple-menu-header-renderer yt-formatted-string,
+ytd-simple-menu-header-renderer yt-icon {{
+  color: var(--yt-text) !important;
+}}
+tp-yt-iron-overlay-backdrop {{
+  background: #000 !important;
+  opacity: 0.35 !important;
+}}
 }}
