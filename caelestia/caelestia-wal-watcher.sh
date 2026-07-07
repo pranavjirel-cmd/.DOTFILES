@@ -6,8 +6,8 @@ while true; do
     if [ -n "$CUR" ] && [ "$CUR" != "$LAST" ]; then
         python3 - << 'PYEOF'
 import json, os
-BG_MIX = 0.15      # how much primary hue tints the page background
-PANEL_MIX = 0.25   # how much primary hue tints panels
+BG_MIX = 0.5
+PANEL_MIX = 0.6
 p = os.path.expanduser("~/.local/state/caelestia/scheme.json")
 c = json.load(open(p))["colours"]
 def mix(a, b, t):

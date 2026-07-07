@@ -624,4 +624,38 @@ tp-yt-iron-overlay-backdrop {{
   background: #000 !important;
   opacity: 0.35 !important;
 }}
+
+/* --- polish 13: menu scrim, assertive edition --- */
+tp-yt-iron-overlay-backdrop,
+tp-yt-iron-overlay-backdrop.opened,
+ytd-app #scrim,
+#scrim {{
+  background: #000 !important;
+  opacity: 0.3 !important;
+}}
+
+/* --- polish 14: video player control buttons --- */
+.ytp-button,
+button.ytp-button {{
+  border-radius: 0 !important;
+}}
+.ytp-button:hover,
+button.ytp-button:hover {{
+  outline: 2px solid var(--yt-hot) !important;
+  outline-offset: -4px !important;
+  background: var(--yt-panel) !important;
+}}
+/* settings/quality popup inside the player, for consistency */
+.ytp-popup,
+.ytp-settings-menu {{
+  background: var(--yt-panel) !important;
+  border: 1px solid var(--yt-line) !important;
+  border-radius: 0 !important;
+  color: var(--yt-text) !important;
+}}
+.ytp-menuitem:hover {{
+  background: var(--yt-bg) !important;
+  outline: 2px solid var(--yt-hot) !important;
+  outline-offset: -2px !important;
+}}
 }}
