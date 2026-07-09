@@ -111,7 +111,7 @@ tp-yt-paper-button:hover,
 yt-chip-cloud-chip-renderer:hover,
 .ytChipShapeChip:hover {{
   border-color: var(--yt-hot) !important;
-  outline: 2px solid var(--yt-hot) !important;
+  outline: 3px solid var(--yt-hot) !important;
   outline-offset: -2px !important;
 }}
 /* selected chip ("All") — inverted */
@@ -134,11 +134,11 @@ ytd-rich-grid-media {{
 }}
 ytd-rich-grid-media:hover {{
   border-color: var(--yt-hot) !important;
-  outline: 2px solid var(--yt-hot) !important;
+  outline: 3px solid var(--yt-hot) !important;
   outline-offset: -2px !important;
 }}
 ytd-rich-grid-media:hover ytd-thumbnail a#thumbnail {{
-  outline: 2px solid var(--yt-hot) !important;
+  outline: 3px solid var(--yt-hot) !important;
   outline-offset: -2px !important;
 }}
 
@@ -150,7 +150,7 @@ ytd-rich-grid-media:hover ytd-thumbnail a#thumbnail {{
 }}
 #above-the-fold:hover {{
   border-color: var(--yt-hot) !important;
-  outline: 2px solid var(--yt-hot) !important;
+  outline: 3px solid var(--yt-hot) !important;
   outline-offset: -2px !important;
 }}
 
@@ -178,7 +178,7 @@ ytd-comments {{
 }}
 ytd-comments:hover {{
   border-color: var(--yt-hot-rose) !important;
-  outline: 2px solid var(--yt-hot-rose) !important;
+  outline: 3px solid var(--yt-hot-rose) !important;
   outline-offset: -2px !important;
 }}
 ytd-comment-thread-renderer {{
@@ -189,7 +189,7 @@ ytd-comment-thread-renderer {{
 }}
 ytd-comment-thread-renderer:hover {{
   border-color: var(--yt-hot-rose) !important;
-  outline: 2px solid var(--yt-hot-rose) !important;
+  outline: 3px solid var(--yt-hot-rose) !important;
   outline-offset: -2px !important;
 }}
 ytd-comment-view-model, ytd-comment-renderer,
@@ -209,7 +209,7 @@ ytd-playlist-panel-renderer {{
 }}
 ytd-playlist-panel-renderer:hover {{
   border-color: var(--yt-hot-lime) !important;
-  outline: 2px solid var(--yt-hot-lime) !important;
+  outline: 3px solid var(--yt-hot-lime) !important;
   outline-offset: -2px !important;
 }}
 ytd-playlist-panel-video-renderer {{
@@ -219,7 +219,7 @@ ytd-playlist-panel-video-renderer {{
 }}
 ytd-playlist-panel-video-renderer:hover {{
   border-color: var(--yt-hot-lime) !important;
-  outline: 2px solid var(--yt-hot-lime) !important;
+  outline: 3px solid var(--yt-hot-lime) !important;
   outline-offset: -2px !important;
 }}
 
@@ -248,7 +248,7 @@ ytd-watch-next-secondary-results-renderer {{
 }}
 ytd-watch-next-secondary-results-renderer:hover {{
   border-color: var(--yt-hot-rose) !important;
-  outline: 2px solid var(--yt-hot-rose) !important;
+  outline: 3px solid var(--yt-hot-rose) !important;
   outline-offset: -2px !important;
 }}
 
@@ -279,7 +279,7 @@ ytd-watch-next-secondary-results-renderer:hover {{
 #secondary ytd-compact-radio-renderer:hover #dismissible,
 #secondary ytd-compact-playlist-renderer:hover #dismissible {{
   border-color: var(--yt-hot-rose) !important;
-  outline: 2px solid var(--yt-hot-rose) !important;
+  outline: 3px solid var(--yt-hot-rose) !important;
   outline-offset: -2px !important;
 }}
 
@@ -296,7 +296,7 @@ ytd-watch-next-secondary-results-renderer:hover {{
 #secondary ytd-compact-radio-renderer ytd-thumbnail:hover yt-img-shadow,
 #secondary ytd-compact-playlist-renderer ytd-thumbnail:hover yt-img-shadow {{
   border-color: var(--yt-hot-rose) !important;
-  outline: 2px solid var(--yt-hot-rose) !important;
+  outline: 3px solid var(--yt-hot-rose) !important;
   outline-offset: -2px !important;
 }}
 
@@ -330,7 +330,7 @@ ytd-watch-next-secondary-results-renderer:hover {{
 .ytSearchboxComponentSearchButton:hover,
 .ytSearchboxComponentSearchButtonDark:hover {{
   border-color: var(--yt-hot) !important;
-  outline: 2px solid var(--yt-hot) !important;
+  outline: 3px solid var(--yt-hot) !important;
   outline-offset: -2px !important;
 }}
 
@@ -348,7 +348,7 @@ button-view-model button {{
 yt-button-view-model button:hover,
 button-view-model button:hover {{
   border-color: var(--yt-hot) !important;
-  outline: 2px solid var(--yt-hot) !important;
+  outline: 3px solid var(--yt-hot) !important;
   outline-offset: -2px !important;
 }}
 segmented-like-dislike-button-view-model,
@@ -431,14 +431,14 @@ dislike-button-view-model button {{
 like-button-view-model button:hover,
 dislike-button-view-model button:hover {{
   border-color: var(--yt-hot) !important;
-  outline: 2px solid var(--yt-hot) !important;
+  outline: 3px solid var(--yt-hot) !important;
   outline-offset: -2px !important;
 }}
 
 /* --- polish 5: metadata panel = one box, hover-highlighted; inner description line removed --- */
 ytd-watch-metadata:hover {{
   border-color: var(--yt-hot) !important;
-  outline: 2px solid var(--yt-hot) !important;
+  outline: 3px solid var(--yt-hot) !important;
   outline-offset: -2px !important;
 }}
 #description,
@@ -547,12 +547,12 @@ tp-yt-paper-item {{
 }}
 tp-yt-paper-item:hover {{
   background: var(--yt-panel) !important;
-  outline: 2px solid var(--yt-hot) !important;
+  outline: 3px solid var(--yt-hot) !important;
   outline-offset: -2px !important;
 }}
 ytd-guide-entry-renderer[active] tp-yt-paper-item {{
   background: var(--yt-panel) !important;
-  outline: 2px solid var(--yt-hot) !important;
+  outline: 3px solid var(--yt-hot) !important;
   outline-offset: -2px !important;
 }}
 ytd-guide-section-renderer h3 {{
@@ -568,7 +568,7 @@ button#button.yt-icon-button {{
 }}
 yt-icon-button:hover {{
   background: var(--yt-panel) !important;
-  outline: 2px solid var(--yt-hot) !important;
+  outline: 3px solid var(--yt-hot) !important;
   outline-offset: -2px !important;
 }}
 
@@ -587,7 +587,7 @@ ytd-notification-renderer {{
 }}
 ytd-notification-renderer:hover {{
   border-color: var(--yt-hot) !important;
-  outline: 2px solid var(--yt-hot) !important;
+  outline: 3px solid var(--yt-hot) !important;
   outline-offset: -2px !important;
 }}
 ytd-notification-renderer yt-formatted-string,
@@ -641,7 +641,7 @@ button.ytp-button {{
 }}
 .ytp-button:hover,
 button.ytp-button:hover {{
-  outline: 2px solid var(--yt-hot) !important;
+  outline: 3px solid var(--yt-hot) !important;
   outline-offset: -4px !important;
   background: var(--yt-panel) !important;
 }}
@@ -655,7 +655,7 @@ button.ytp-button:hover {{
 }}
 .ytp-menuitem:hover {{
   background: var(--yt-bg) !important;
-  outline: 2px solid var(--yt-hot) !important;
+  outline: 3px solid var(--yt-hot) !important;
   outline-offset: -2px !important;
 }}
 
@@ -679,7 +679,7 @@ ytd-multi-page-menu-section-renderer {{
 .ytSuggestionComponentSuggestion:hover,
 .ytSuggestionComponentSuggestion[aria-selected="true"] {{
   background: var(--yt-panel) !important;
-  outline: 2px solid var(--yt-hot) !important;
+  outline: 3px solid var(--yt-hot) !important;
   outline-offset: -2px !important;
 }}
 
