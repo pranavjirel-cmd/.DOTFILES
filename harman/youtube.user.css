@@ -769,4 +769,55 @@ tp-yt-iron-dropdown #contentWrapper {{
 [class*="ytListItemViewModel"] .ytSpecTouchFeedbackShapeFill {{
   background: transparent !important;
 }}
+
+/* --- polish 20: dropdown shell neutral; single ring per menu item --- */
+tp-yt-iron-dropdown,
+tp-yt-iron-dropdown #contentWrapper {{
+  background: transparent !important;
+  border: 0 !important;
+}}
+[class*="ytListItemViewModel"] [class*="ytListItemViewModel"],
+[class*="ytListItemViewModel"] [class*="ytListItemViewModel"]:hover {{
+  outline: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}}
+[class*="ytListItemViewModel"] .ytSpecTouchFeedbackShapeFill {{
+  background: transparent !important;
+}}
+/* ==== kebab dropdown — contextual-sheet structure ==== */
+tp-yt-iron-dropdown.ytd-popup-container,
+tp-yt-iron-dropdown #contentWrapper,
+ytd-menu-popup-renderer,
+yt-contextual-sheet-layout,
+.ytContextualSheetLayoutHost,
+.ytContextualSheetLayoutHeaderContainer,
+tp-yt-paper-listbox#items.ytd-menu-popup-renderer {{
+  background: {background} !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}}
+tp-yt-iron-dropdown.ytd-popup-container {{
+  border: 1px solid {color8} !important;
+}}
+ytd-menu-popup-renderer tp-yt-paper-item {{
+  background: transparent !important;
+}}
+ytd-menu-popup-renderer tp-yt-paper-item:hover {{
+  background: {color8} !important;
+  box-shadow: none !important;
+  outline: none !important;
+}}
+ytd-menu-popup-renderer yt-icon,
+ytd-menu-popup-renderer yt-icon:hover,
+ytd-menu-popup-renderer .yt-icon-shape,
+ytd-menu-popup-renderer .yt-icon-shape:hover,
+ytd-menu-popup-renderer yt-icon-button:hover {{
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+}}
 }}
