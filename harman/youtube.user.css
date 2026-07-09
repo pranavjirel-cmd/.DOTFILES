@@ -730,4 +730,27 @@ ytd-rich-item-renderer #menu,
 yt-lockup-view-model [class*="menu-button"] {{
   margin-right: 10px !important;
 }}
+
+/* --- polish 19: new-generation sheet/list menus (lockup kebab) --- */
+yt-sheet-view-model,
+yt-contextual-sheet-layout,
+yt-list-view-model,
+[class*="ytSheetViewModel"],
+[class*="ytContextualSheet"],
+[class*="ytListViewModel"] {{
+  background: var(--yt-panel) !important;
+  color: var(--yt-text) !important;
+  border: 1px solid var(--yt-line) !important;
+  border-radius: 0 !important;
+}}
+[class*="ytListItemViewModel"] {{
+  background: transparent !important;
+  color: var(--yt-text) !important;
+  border-radius: 0 !important;
+}}
+[class*="ytListItemViewModel"]:hover {{
+  background: var(--yt-bg) !important;
+  outline: 3px solid var(--yt-hot) !important;
+  outline-offset: -3px !important;
+}}
 }}
