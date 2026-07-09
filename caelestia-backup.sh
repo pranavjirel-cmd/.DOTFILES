@@ -10,6 +10,6 @@ caelestia scheme get --name > ~/dotfiles/caelestia/scheme.txt 2>/dev/null
 cd ~/dotfiles
 git add -A
 git commit -m "caelestia backup - $(date '+%Y-%m-%d %H:%M')"
-git push
+git push || echo "!! PUSH FAILED — run git pull --rebase && git push"
 
 echo "done! caelestia backed up to github"

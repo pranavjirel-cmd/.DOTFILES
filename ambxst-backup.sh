@@ -13,6 +13,6 @@ cp ~/.config/scripts/record-toggle.sh ~/dotfiles/ambxst/
 cd ~/dotfiles
 git add .
 git commit -m "ambxst backup - $(date '+%Y-%m-%d %H:%M')"
-git push
+git push || echo "!! PUSH FAILED — run git pull --rebase && git push"
 
 echo "done! ambxst backed up to github"

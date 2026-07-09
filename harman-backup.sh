@@ -11,6 +11,6 @@ cp ~/.zshrc ~/dotfiles/harman/
 cd ~/dotfiles
 git add .
 git commit -m "harman backup - $(date '+%Y-%m-%d %H:%M')"
-git push
+git push || echo "!! PUSH FAILED — run git pull --rebase && git push"
 
 echo "done! harman backed up to github"
