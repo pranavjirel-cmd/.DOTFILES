@@ -1656,3 +1656,172 @@ ytd-search ytd-video-renderer .metadata-snippet-text {{
   max-width: none !important;
 }}
 /* ==== end search-polish ==== */
+/* ==== theater-mode ==== */
+/* theater = native full-bleed flow. flexy positions/sizes this player itself and
+   fights every override, so we leave it alone; panel discipline resumes on exit. */
+ytd-watch-flexy[theater] #columns {{
+  position: static !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}}
+/* ==== end theater-mode ==== */
+/* ==== bell-mic-hover ==== */
+/* BELL is a yt-icon-button (button#button), NOT a spec-button - target it directly */
+ytd-notification-topbar-button-renderer button#button {{
+  background: transparent !important;
+  border: 2px solid var(--yt-line, {color8}) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+}}
+ytd-notification-topbar-button-renderer button#button:hover,
+ytd-notification-topbar-button-renderer:hover button#button {{
+  background: transparent !important;
+  border-color: var(--yt-hot, {color8}) !important;
+  color: var(--yt-hot, {color8}) !important;
+}}
+/* strip the round fill/ripple layers inside the bell */
+ytd-notification-topbar-button-renderer yt-interaction,
+ytd-notification-topbar-button-renderer yt-interaction .stroke,
+ytd-notification-topbar-button-renderer yt-interaction .fill,
+ytd-notification-topbar-button-renderer button#button::before,
+ytd-notification-topbar-button-renderer button#button::after {{
+  display: none !important;
+  background: transparent !important;
+}}
+/* notification count badge: square it */
+.ytSpecIconBadgeShapeBadge,
+ytd-notification-topbar-button-renderer .ytSpecIconBadgeShapeBadge {{
+  border-radius: 0 !important;
+}}
+/* MIC: square box, same colors, no fill on hover */
+.ytSearchboxComponentVoiceSearchButton {{
+  border: 2px solid var(--yt-line, {color8}) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}}
+.ytSearchboxComponentVoiceSearchButton:hover {{
+  border-color: var(--yt-hot, {color8}) !important;
+  background: transparent !important;
+}}
+.ytSearchboxComponentVoiceSearchButton::before,
+.ytSearchboxComponentVoiceSearchButton::after,
+#voice-search-button yt-interaction {{
+  display: none !important;
+}}
+/* ==== end bell-mic-hover ==== */
+/* ==== bell-nuke ==== */
+/* the stubborn circle has no background and no ripple - it's a box-shadow.
+   kill every shadow/background in the bell subtree, hover or not; border stays. */
+ytd-notification-topbar-button-renderer,
+ytd-notification-topbar-button-renderer *,
+ytd-notification-topbar-button-renderer:hover,
+ytd-notification-topbar-button-renderer:hover *,
+ytd-notification-topbar-button-renderer *:hover {{
+  box-shadow: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}}
+/* re-assert: border on the button, red badge keeps its fill */
+ytd-notification-topbar-button-renderer button#button {{
+  border: 2px solid var(--yt-line, {color8}) !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+}}
+ytd-notification-topbar-button-renderer:hover button#button {{
+  border-color: var(--yt-hot, {color8}) !important;
+  color: var(--yt-hot, {color8}) !important;
+}}
+ytd-notification-topbar-button-renderer .ytSpecIconBadgeShapeBadge {{
+  background: rgb(225, 0, 45) !important;
+  background-color: rgb(225, 0, 45) !important;
+  border-radius: 0 !important;
+}}
+/* ==== end bell-nuke ==== */
+/* ==== mic-nuke ==== */
+/* same as the bell: kill every shadow/background in the mic subtree, keep the border */
+#voice-search-button,
+#voice-search-button *,
+#voice-search-button:hover,
+#voice-search-button:hover *,
+#voice-search-button *:hover,
+.ytSearchboxComponentVoiceSearchButton,
+.ytSearchboxComponentVoiceSearchButton *,
+.ytSearchboxComponentVoiceSearchButton:hover,
+.ytSearchboxComponentVoiceSearchButton:hover * {{
+  box-shadow: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}}
+#voice-search-button button#button,
+.ytSearchboxComponentVoiceSearchButton {{
+  border: 2px solid var(--yt-line, {color8}) !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+}}
+#voice-search-button:hover button#button,
+.ytSearchboxComponentVoiceSearchButton:hover {{
+  border-color: var(--yt-hot, {color8}) !important;
+  color: var(--yt-hot, {color8}) !important;
+}}
+/* ==== end mic-nuke ==== */
+/* ==== no-hover-preview ==== */
+/* inline previews off: they cannot be reconciled with viewport-fixed scrolling panels */
+ytd-video-preview {{
+  display: none !important;
+}}
+/* ==== end no-hover-preview ==== */
+/* ==== drawer-overlay ==== */
+/* z-index ONLY (no position/height - that breaks its slide animation).
+   our panels sit at 2350-2400 and were covering the drawer's scrim, so clicks
+   outside the drawer never reached it and it could not close. */
+tp-yt-app-drawer {{
+  z-index: 3000 !important;
+}}
+tp-yt-app-drawer #scrim {{
+  pointer-events: auto !important;
+}}
+tp-yt-app-drawer #contentContainer {{
+  background: var(--yt-bg, {background}) !important;
+}}
+/* one border per entry, no nesting */
+ytd-guide-entry-renderer tp-yt-paper-item,
+ytd-guide-entry-renderer yt-interaction {{
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}}
+ytd-guide-entry-renderer:hover tp-yt-paper-item,
+ytd-guide-entry-renderer[active] tp-yt-paper-item {{
+  outline: 2px solid var(--yt-hot, {color8}) !important;
+  outline-offset: -2px !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}}
+/* ==== end drawer-overlay ==== */
+/* ==== drawer-push ==== */
+/* drawer gets the mini-guide's border language */
+tp-yt-app-drawer #contentContainer {{
+  border: 2px solid var(--yt-line, {color8}) !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+}}
+tp-yt-app-drawer #contentContainer:hover {{
+  border-color: var(--yt-hot, {color8}) !important;
+}}
+/* while the drawer is open, push every panel + the masthead clear of it (240 + 12) */
+ytd-app:has(tp-yt-app-drawer[opened]) ytd-browse[page-subtype="home"] #contents.ytd-rich-grid-renderer,
+ytd-app:has(tp-yt-app-drawer[opened]) ytd-search ytd-two-column-search-results-renderer {{
+  left: 252px !important;
+}}
+ytd-app:has(tp-yt-app-drawer[opened]) ytd-watch-flexy #columns {{
+  margin-left: 252px !important;
+}}
+ytd-app:has(tp-yt-app-drawer[opened]) ytd-masthead #container.ytd-masthead {{
+  margin-left: 252px !important;
+}}
+ytd-app:has(tp-yt-app-drawer[opened]) ytd-feed-filter-chip-bar-renderer #chips-wrapper {{
+  left: 252px !important;
+}}
+/* ==== end drawer-push ==== */
