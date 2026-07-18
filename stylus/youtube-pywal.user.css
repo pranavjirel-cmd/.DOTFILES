@@ -1,6 +1,2 @@
 wl-paste > ~/dotfiles/stylus/youtube-pywal.user.css
-head -3 ~/dotfiles/stylus/youtube-pywal.user.css   # should show the ==UserStyle== header
-cd ~/dotfiles
-git add stylus/youtube-pywal.user.css
-git commit -m "youtube-pywal userstyle: baseline before edits"
-git push
+head -3 ~/dotfiles/stylus/youtube-pywal.user.css
